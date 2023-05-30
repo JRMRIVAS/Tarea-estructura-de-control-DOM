@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="./cpu.svg"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--<audio src="./musica.mp3" autoplay loop controls></audio>-->
+    <main class="container-fluid my-5 ">
+        <h1>GUIA JAVASCRIPT </h1><br>
+        <h1><small>ESTRUCTURAS DE CONTROL & DOM</small></h1><br><br>
+        <section class="row justify-content-around">
+            <div class="col-md-5 ">
+    
+                <!--Ejercicio 1-->
+                <h2>Ejercicio 1</h2>
+                <h3>Evaluación de edad</h3>
+                <input type="number" class="edad" placeholder="Ingresar edad"><br><br>
+                <button class="evaluar" >Evaluar</button><br><br>
+                <p class="evaluarEdad"></p>
+                <div class="border-bottom border-4 border-warning"></div><br>
+            
+                <!--Ejercicio 2-->
+                <h2>Ejercicio 2</h2>
+                <h3>Determinar nota final de alumno</h3>
+                    <label >Ingresar nombre de estudiante</label>
+                    <input type="text" class="nombre"><br><br> 
+                    <label >Ingresar carnet de estudiante</label> 
+                    <input type="text" class="carnet"><br><br> 
+                    <label >Nota de examen</label> 
+                    <input type="number" class="nexamen"><br><br>
+                    <label >Nota de tareas</label> 
+                    <input type="number" class="ntareas"><br><br>
+                    <label >Asistencia del estudiante</label> 
+                    <input type="number" class="asistencia"><br><br>
+                    <label >Nota de investigacion</label> 
+                    <input type="number" class="ninvest"><br><br>
+                    <button class="calcularNota">Calcular</button><br><br>
+                <p class="resumenNota"></p>
+                <div class="border-bottom border-4 border-warning"></div><br>
+
+                <!--Ejercicio 3-->
+                <h2>Ejercicio 3</h2>
+                <h3>Calculadora de salario final</h3>
+                <label>Ingrese su nombre</label>
+                <input type="text" class="trabajador"><br><br>
+                <label>Ingrese su salario</label>
+                <input type="number" class="salario"><br><br>
+                <label> Seleccione su categoría</label>
+                <select name="cat" id="categorias">
+                    <option value=""></option>
+                    <option value="cat A = 15%">Categoría A</option>
+                    <option value="cat B = 30%">Categoría B</option>
+                    <option value="cat C = 10%">Categoría C</option>
+                    <option value="cat D = 20%">Categoría D</option>
+                </select><br><br>
+                <button class="calcularAumento">Calcular</button><br><br>
+                <p class="aumentoSalario"></p>
+                <div class="border-bottom border-4 border-warning"></div><br>
+
+                <!--Ejercicio 4-->
+                <h2>Ejercicio 4</h2>
+                <h3>Comparando valores</h3>
+                <label>Ingrese un valor</label>
+                <input type="number" class="numA"><br><br>
+                <label>Ingrese otro valor</label>
+                <input type="number" class="numB"><br><br>
+                <button class="Comparando">Comparar</button><br><br>
+                <p class="resultado"></p>
+                <div class="border-bottom border-4 border-warning"></div><br>
+
+                <!--Ejercicio 5-->
+                <h2>Ejercicio 5</h2>
+                <h3>Calculadora de precio final de un vehículo</h3>
+                <label> Seleccione su modelo de vehículo</label>
+                <select name="mod" id="descuento">
+                    <option value=""></option>
+                    <option value="FORD FIESTA">FORD FIESTA</option>
+                    <option value="FORD FOCUS">FORD FOCUS</option>
+                    <option value="FORD ESCAPE">FORD ESCAPE</option>
+                </select><br><br>
+                <label>Ingrese el valor del vehículo</label>
+                <input type="number" class="costoCarro"><br><br>
+                <button class="descuentoCarro">Calcular</button><br><br>
+                <p class="valorCarro"></p>
+            </div>
+            <div class="col-md-4">
+                <!--Ejercicio 6-->
+                <h2>Ejercicio 6</h2>
+                <h3>Costo de tu viaje</h3>
+                <table class="table table-sm">
+                    <thead class="table-dark">
+                        <tr>
+                            <th colspan="2" class="text-center">Precios por destino</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>DESTINO</td>
+                            <td>PRECIO</td>
+                        </tr>
+                        <tr>
+                            <td>La costa del sol</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr>
+                            <td>Panchimalco</td>
+                            <td>$20</td>
+                        </tr>
+                        <tr>
+                            <td>Puerto El Triunfo</td>
+                            <td>$35</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" class="text-center fw-semibold">
+                                Precios incluyen IVA
+                            </td>
+                        </tr>
+                        <tr >
+                            <td colspan="2" class="text-sm">
+                                <small>Los viajes saliendo desde la ciudad de La Palma tienen descuento</small> 
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <label>Seleccione el lugar de origen</label>
+                <select name="" id="origen">
+                    <option value="palma">La Palma</option>
+                    <option value="ahuachapan">Ahuachapán</option>
+                </select><br><br>
+                <label>Seleccione el lugar de destino</label>
+                <select name="" id="destino">
+                    <option value="costa">La costa del sol</option>
+                    <option value="panchimalco">Panchimalco</option>
+                    <option value="puerto">Puerto El Triunfo</option>
+                </select><br><br>
+                <button class="evaluarViaje">Aceptar</button>
+                <p class="costoViaje"></p><br>
+                <div class="border-bottom border-4 border-warning"></div><br>
+
+                <!--Ejercicio 7-->
+                <h2>Ejercicio 7</h2>
+                <h3>Cálculo de nota media ponderada</h3>
+                <label >Ingresar nota A</label>
+                <input type="number" class="notaA"><br><br> 
+                <label >Ingresar ponderación nota A</label> 
+                <input type="number" class="pondA"><br><br>
+                <label >Ingresar nota B</label>
+                <input type="number" class="notaB"><br><br> 
+                <label >Ingresar ponderación nota B</label> 
+                <input type="number" class="pondB"><br><br> 
+                <button class="calPonderar">Calcular</button>
+                <p class="ponderacion"></p><br>
+                <div class="border-bottom border-4 border-warning"></div><br>
+
+                <!--Ejercicio 8-->
+                <h2>Ejercicio 8</h2>
+                <h3>Conversor de escala de temperatura Celcius a Fahrenheit</h3>
+                <h5>1 °C = 33.8 °F</h5>
+                <label >Ingresar temperatura en grados Celcius</label><br><br>
+                <input type="number" class="celcius" ><br><br> 
+                <button class="convertir">Convertir</button>
+                <p class="conversion"></p><br>
+                <div class="border-bottom border-4 border-warning"></div><br>
+
+                <!--Ejercicio 9-->
+                <h2>Ejercicio 9</h2>
+                <h3>Captura de 10 valores y análisis</h3><br>
+                <table class="table table-sm table-bordered table-striped w-50 text-center ">
+                    <tbody>
+                        <tr class="fw-bold">
+                            <td>#</td>
+                            <td>CANTIDADES</td>
+                            <td>#</td>
+                            <td>CANTIDADES</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td><input type="number" class="cuadricula" id="n1"></td>
+                            <td>6</td>
+                            <td><input type="number" class="cuadricula" id="n6"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><input type="number" class="cuadricula" id="n2"></td>
+                            <td>7</td>
+                            <td><input type="number" class="cuadricula" id="n7"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><input type="number" class="cuadricula" id="n3"></td>
+                            <td>8</td>
+                            <td><input type="number" class="cuadricula" id="n8"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><input type="number" class="cuadricula" id="n4"></td>
+                            <td>9</td>
+                            <td><input type="number" class="cuadricula" id="n9"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><input type="number" class="cuadricula" id="n5"></td>
+                            <td>10</td>
+                            <td><input type="number" class="cuadricula" id="n10"></td>
+                    </tbody>
+                </table>
+                <button class="ingresar">Ingresar valores</button><br>
+                <button class="analizar">Analizar Valores</button><br>
+                <p class="analizado"></p><br>
+                <div class="border-bottom border-4 border-warning"></div><br>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="./ejercicio1.js"></script>
+</html>
