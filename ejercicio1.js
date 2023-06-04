@@ -150,57 +150,52 @@ convertir.addEventListener('click', ()=>{
 
 //Ejercicio 9
 let datos = [];
+let analizado = document.querySelector('.analizado');
+
+
 let ingresar = document.querySelector('.ingresar');
 ingresar.addEventListener('click', ()=>{
-    
-    for (let i = 1; i <= 10; i++) {
-        const numero = parseInt(document.getElementById(`n${i}`).value);
-        if (!isNaN(numero)) {
-        datos.push(numero);
+
+    if(datos.length === 0){
+        for (let i = 1; i <= 10; i++) {
+            let valor = parseInt(document.getElementById('n'+i).value);
+            if (!isNaN(valor)) {
+                datos.push(valor)
+            }
         }
-    }
-
-    console.log(datos);
-
-        let analizar = document.querySelector('.analizar');
-        analizar.addEventListener('click', () => {
-        let analizado = document.querySelector('.analizado');
+            console.log(datos);
+        
         let cont_negativo = 0;
         let cont_positivo = 0;
         let cont_mul15 = 0;
         let sum_pares = 0;
 
-        datos.forEach(valor =>{
-            if (valor < 0){
-                cont_negativo++;
-            } else if (valor > 0){
-                cont_positivo++;
-            } else if (valor % 15 === 0){
-                cont_mul15++;
+        for (let j = 0; j < datos.length; j++) {    
+            if (datos[j] >= 0) {
+            cont_positivo++;
+            } else {
+            cont_negativo++;
             }
-        })
-
-        for (let j = 0; j < datos.length; j++) {
+        
+            if (datos[j] % 15 === 0) {
+            cont_mul15++;
+            }
+        
             if (datos[j] % 2 === 0) {
-                sum_pares += datos[j];
+            sum_pares += datos[j];
             }
         }
 
-        analizado.innerHTML = "Cantidad de números negativos: " + cont_negativo + "<br>Cantidad de números positivos:" + cont_positivo + "<br>Cantidad de números multiplos de 15: " + cont_mul15 + "<br>La suma de los números pares es: " + sum_pares
-        
-        if(analizado != ""){
-            datos = [];
-        }
-        
+        analizado.innerHTML = "Cantidad de números negativos:\n  "+ cont_negativo + "<br>Cantidad de números positivos:" + "\n" + cont_positivo + "<br>Cantidad de números multiplos de 15: " + "\n" + cont_mul15 + "<br>La suma de los números pares es: " + "\n" + sum_pares
 
-    })
-
-
+    } else {
+        analizado.innerHTML = "Por favor hacer click en borrar para iniciar una nueva base de datos"
+    }
 })
 
-
-
-
-
-
-
+let borrar = document.querySelector('.borrar');
+borrar.addEventListener('click', ()=>{
+    if (datos.length > 0) {
+        datos = [];
+    }
+})
