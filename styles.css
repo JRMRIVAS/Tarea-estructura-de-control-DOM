@@ -53,6 +53,10 @@ p{
     width: 50%;
 }
 
+#promedio{
+    width: 50%;
+}
+
 @media (max-width: 1024px ){
     input{
         width: 38%;

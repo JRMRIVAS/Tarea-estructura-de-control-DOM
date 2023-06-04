@@ -152,7 +152,6 @@ convertir.addEventListener('click', ()=>{
 let datos = [];
 let analizado = document.querySelector('.analizado');
 
-
 let ingresar = document.querySelector('.ingresar');
 ingresar.addEventListener('click', ()=>{
 
@@ -189,13 +188,63 @@ ingresar.addEventListener('click', ()=>{
         analizado.innerHTML = "Cantidad de números negativos:\n  "+ cont_negativo + "<br>Cantidad de números positivos:" + "\n" + cont_positivo + "<br>Cantidad de números multiplos de 15: " + "\n" + cont_mul15 + "<br>La suma de los números pares es: " + "\n" + sum_pares
 
     } else {
-        analizado.innerHTML = "Por favor hacer click en borrar para iniciar una nueva base de datos"
+        analizado.innerHTML = "Por favor hacer click en Borrar Valores para iniciar un nuevo análisis"
     }
 })
 
 let borrar = document.querySelector('.borrar');
 borrar.addEventListener('click', ()=>{
+
+    analizado.innerHTML = "Ya puedes analizar de nuevo"
+    
     if (datos.length > 0) {
         datos = [];
     }
+})
+
+//Ejercicio 10
+let procesar = document.querySelector('.procesar');
+procesar.addEventListener('click', () =>{
+    let procesado = document.querySelector('.procesado');
+
+    let tdia = document.querySelector('.tdia').value;
+    //let ttarde = parseInt(document.querySelector('.ttarde').value);
+    //let tnoche= parseInt(document.querySelector('.tnoche').value);
+
+    let promDia = 0;
+    let promTarde = 0;
+    let promNoche = 0;
+    
+    console.log(tdia);
+
+    let valoresDia = tdia.split(' ');
+
+    //let valoresTarde = ttarde.split(' ');
+
+    //let valoresNoche = tnoche.split(' ');
+
+    console.log(valoresDia);
+    for (let k = 0; k < valoresDia.length; k++) {   
+        
+        promDia += datos[k]; 
+
+        console.log(parseInt(promDia));
+    }
+
+        
+        /*if (datos[j] >= 0) {
+        cont_positivo++;
+        } else {
+        cont_negativo++;
+        }
+    
+        if (datos[j] % 15 === 0) {
+        cont_mul15++;
+        }
+    
+        if (datos[j] % 2 === 0) {
+        sum_pares += datos[j];
+        }*/
+    
+
 })
