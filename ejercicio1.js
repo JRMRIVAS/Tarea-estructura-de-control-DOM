@@ -5,7 +5,7 @@ let evaluar = document.querySelector('.evaluar');
 evaluar.addEventListener('click', () => {
     let edad = document.querySelector('.edad');
     let evaluarEdad = document.querySelector('.evaluarEdad');
-    evaluarEdad.innerHTML = (parseInt(edad.value) >=18 ? "Ya no estas chichi":"Eres un polluelito bebé")
+    evaluarEdad.innerHTML = (parseInt(edad.value) >=18 ? "Ya eres mayor":"Eres un polluelo")
 })
 
 //Ejercicio 2
