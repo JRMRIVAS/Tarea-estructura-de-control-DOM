@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
-<body>
-    <audio src="./musica.mp3" autoplay loop ></audio>
+<body class="home">
+    <div class="container-fluid form-check form-switch d-flex flex-row-reverse pt-4 pe-4">
+        <audio id="myAudio" src="./musica.mp3" autoplay loop ></audio>
+        <label class="form-check-label" for="flexSwitchCheckChecked">&#x1F50A</label>
+        <input class="form-check-input  mx-4 interruptor" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked">&#x1F507</label>
+    </div>
     <main class="container-fluid my-5 ">
         <h1>GUIA JAVASCRIPT </h1><br>
         <h1><small>ESTRUCTURAS DE CONTROL & DOM</small></h1><br><br>
@@ -214,7 +219,7 @@
                             <td><input type="number" class="cuadricula" id="n10"></td>
                     </tbody>
                 </table>
-                <button class="ingresar me-3">Ingresar valores</button>
+                <button class="ingresar me-3">Analizar valores</button>
                 <button class="borrar">Borrar Valores</button><br>
                 <p class="analizado"></p><br>
 

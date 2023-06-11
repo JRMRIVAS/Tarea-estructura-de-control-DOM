@@ -1,4 +1,14 @@
-
+//Control del audio
+let sonido = document.getElementById("myAudio");
+let interruptor = document.querySelector('.interruptor');
+interruptor.addEventListener('change',()=>{
+    let silencio = !interruptor.checked;
+    if (silencio) {
+        sonido.pause();
+        } else {
+        sonido.play();
+        }
+})
 
 //Ejercicio 1
 let evaluar = document.querySelector('.evaluar');
@@ -165,18 +175,18 @@ ingresar.addEventListener('click', ()=>{
             console.log(datos);
         
         let cont_negativo = 0;
-        let cont_positivo = 0;
+        let cont_positivo = 0 ;
         let cont_mul15 = 0;
         let sum_pares = 0;
 
         for (let j = 0; j < datos.length; j++) {    
-            if (datos[j] >= 0) {
+            if (datos[j] > 0) {
             cont_positivo++;
-            } else {
+            } else if (datos[j] < 0) {
             cont_negativo++;
             }
         
-            if (datos[j] % 15 === 0) {
+            if (datos[j] % 15 === 0 && datos[j] !==0) {
             cont_mul15++;
             }
         

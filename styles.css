@@ -1,9 +1,11 @@
-
-body{
+.home{
     background: rgb(170,239,255);
     background: linear-gradient(198deg, rgba(170,239,255,1) 0%, rgba(247,152,152,1) 100%);
 }
 
+.landing{
+    background-color: rgba(23, 52, 198, 0.5);
+}
 #sound{
     background-color: transparent;
     color: black;
@@ -55,6 +57,25 @@ p{
 
 #promedio{
     width: 50%;
+}
+.textoL{
+    font-size: 2.5rem;
+}
+
+.textoM{
+    font-size: 2rem;
+}
+
+.linkL{
+/*text-decoration: none;*/
+font-weight: bold;
+padding: 5px;
+color: whitesmoke;
+transition: 0.5s;
+}
+
+.linkL:hover{
+color: red;
 }
 
 @media (max-width: 1024px ){
