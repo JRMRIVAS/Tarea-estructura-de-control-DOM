@@ -216,7 +216,7 @@ borrar.addEventListener('click', ()=>{
 let procesar = document.querySelector('.procesar');
 procesar.addEventListener('click', () =>{
     let procesado = document.querySelector('.procesado');
-
+    procesado.innerHTML = "Lo siento aun no lo he terminado :("
     let tdia = document.querySelector('.tdia').value;
     //let ttarde = parseInt(document.querySelector('.ttarde').value);
     //let tnoche= parseInt(document.querySelector('.tnoche').value);
